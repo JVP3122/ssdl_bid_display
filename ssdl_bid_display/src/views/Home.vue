@@ -1,13 +1,17 @@
 <template>
-  <HelloWorld />
+  <div>
+    <h1>Landing</h1>
+    <router-link :to="{name: 'SSDL'}">SSDL</router-link>
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
-
   export default {
-    components: {
-      HelloWorld
-    }
+    name: 'Home',
+    data() {
+      return {
+
+      }
+    },
   }
 </script>
