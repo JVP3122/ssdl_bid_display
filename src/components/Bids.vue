@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-card-title>
-        All Bids
+        <p class="title">RFA Auction</p>
         <v-spacer></v-spacer>
         <v-text-field
           v-model="search"
@@ -36,6 +36,7 @@
     props: ['date'],
     data() {
       return {
+        title: '',
         search: '',
         bids: {},
         items: [],
@@ -82,20 +83,15 @@
           })
           return playerObject
         })
-        console.log('this.bids', this.bids)
-        console.log('this.items', this.items)
       }
     },
     mounted() {
-      console.log('this.date', this.date)
       this.getBids();
       try {
         this.parseBids();
       } catch(err) {
-        console.log('err', err)
       }
       this.createItems();
-      // console.log('this.bids', this.bids)
     }
   }
 </script>

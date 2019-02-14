@@ -1,2 +1,29 @@
-# SSDL Bid Display
-Site to display bid results from SSDL fantasy baseball league.  The "backend" code simply reads from a csv file and parses it into JSON objects.  These objects will be stored (for now) in static and served to the "frontend" hosted on GitHub pages.
+# ssdl_bid_display
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
