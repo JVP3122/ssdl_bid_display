@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
-import SSDL from '@/views/SSDL'
+import Old from '@/views/Old'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/ssdl',
   routes: [
     {
       path: '/',
@@ -15,9 +15,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/ssdl',
-      name: 'SSDL',
-      component: SSDL
-    }
+      path: '/:id',
+      name: 'Old',
+      component: Old
+    },
   ]
 })

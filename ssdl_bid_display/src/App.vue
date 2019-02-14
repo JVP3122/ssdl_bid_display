@@ -9,23 +9,22 @@
     </v-toolbar>
 
     <v-content>
-      <router-view></router-view>
+      <v-container>
+        <router-view></router-view>
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Home from '@/views/Home'
-
-export default {
-  name: 'App',
-  components: {
-    Home
-  },
-  data () {
-    return {
-      //
+  export default {
+    name: 'App',
+    components: {
+    },
+    data () {
+      return {
+        //
+      }
     }
   }
-}
 </script>

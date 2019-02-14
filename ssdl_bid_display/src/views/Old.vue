@@ -1,11 +1,11 @@
 <template>
-  <Bids />
+  <Bids :date="date" />
 </template>
 
 <script>
   import Bids from '@/components/Bids'
   export default {
-    name: "SSDL",
+    name: "Old",
     components: {
       Bids
     },
@@ -13,6 +13,12 @@
       return {
 
       }
+    },
+    mounted() {
+      console.log('this.date', this.date)
+    },
+    computed: {
+      date() { return this.$route.params.id }
     }
   }
 </script>
