@@ -5,9 +5,9 @@ import Winning from '@/views/Winning'
 import All from '@/views/All'
 import Player from '@/views/Player'
 
-Vue.use(Router)
+Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -23,17 +23,33 @@ export default new Router({
     {
       path: '/:id/winning',
       name: 'Winning',
-      component: Winning
+      component: Winning,
+      meta: {
+        title: 'SSDL | Winning Bids'
+      }
     },
     {
       path: '/:id/all',
       name: 'All',
-      component: All
+      component: All,
+      meta: {
+        title: 'SSDL | All Bids'
+      }
     },
     {
       path: '/:id/player',
       name: 'Player',
-      component: Player
+      component: Player,
+      meta: {
+        title: 'SSDL | Bids by Player'
+      }
     }
   ]
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title ? to.meta.title : 'SSDL'
+  next()
 })
+
+export { router }
