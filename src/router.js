@@ -1,23 +1,39 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home.vue'
-import Old from '@/views/Old'
+import Home from '@/views/Home'
+import Winning from '@/views/Winning'
+import All from '@/views/All'
+import Player from '@/views/Player'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: '/ssdl',
+  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
-      name: 'home',
+      redirect: '/current/'
+    },
+    {
+      path: '/:id/',
+      name: 'Home',
       component: Home
     },
     {
-      path: '/:id',
-      name: 'Old',
-      component: Old
+      path: '/:id/winning',
+      name: 'Winning',
+      component: Winning
     },
+    {
+      path: '/:id/all',
+      name: 'All',
+      component: All
+    },
+    {
+      path: '/:id/player',
+      name: 'Player',
+      component: Player
+    }
   ]
 })
