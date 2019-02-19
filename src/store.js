@@ -8,10 +8,10 @@ const store = new Vuex.Store({
     allBids: {},
     winningBids: {},
     playerBids: {},
+    current: 'alw',
   },
   mutations: {
     setPlayerBids(state, payload) {
-      console.log('payload', payload)
       state.playerBids = {}
       try {
         Object.keys(payload).forEach(bid => {
@@ -22,7 +22,6 @@ const store = new Vuex.Store({
       }
     },
     setAllBids(state, payload) {
-      console.log('payload', payload)
       state.allBids = {}
       try {
         Object.keys(payload).forEach(bid => {
@@ -33,7 +32,6 @@ const store = new Vuex.Store({
       }
     },
     setWinningBids(state, payload) {
-      console.log('payload', payload)
       state.winningBids = {}
       try {
         Object.keys(payload).forEach(bid => {

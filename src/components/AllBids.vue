@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-card-title>
-        <p class="title">RFA Auction</p>
+        <p class="title">{{ division }}</p>
         <v-spacer></v-spacer>
         <v-text-field
           v-model="search"
@@ -80,7 +80,8 @@
       ...mapState({
         bids: state => state.allBids,
       }),
-      date() { return this.$route.params.id }
+      date() { return this.$route.params.id },
+      division() { return this.date.toUpperCase() },
     },
     mounted() {
       this.createItems();

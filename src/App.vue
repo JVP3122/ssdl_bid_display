@@ -7,6 +7,9 @@
         <v-spacer></v-spacer>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn-toggle>
+        <v-btn v-for="div in division" :key="div" flat :to="{name: 'Home', params: {id: `${div.toLowerCase()}`}}">{{div}}</v-btn>
+      </v-btn-toggle>
     </v-toolbar>
 
     <v-content>
@@ -24,7 +27,10 @@
     },
     data () {
       return {
-        //
+        division: [
+          'RFA',
+          'ALW'
+        ]
       }
     }
   }

@@ -4,6 +4,7 @@ import Home from '@/views/Home'
 import Winning from '@/views/Winning'
 import All from '@/views/All'
 import Player from '@/views/Player'
+import store from '@/store'
 
 Vue.use(Router);
 
@@ -13,7 +14,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/current/'
+      redirect: `/alw/`
     },
     {
       path: '/:id/',
