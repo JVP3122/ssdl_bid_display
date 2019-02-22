@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <v-layout row wrap>
-        <v-flex v-for="player in playersBid" xs12 md6 row>
+        <v-flex v-for="player in playersBid" :key="player" xs12 md6 row>
           <v-card class="ma-2">
             <v-card-title>
               <span class="title">{{ player }}</span>

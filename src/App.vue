@@ -29,7 +29,9 @@
       return {
         division: [
           'RFA',
-          'ALW'
+          'ALW',
+          'ALC',
+          'NLE'
         ]
       }
     }
