@@ -31,7 +31,8 @@
           'RFA',
           'ALW',
           'ALC',
-          'NLE'
+          'NLE',
+          'ALE',
         ]
       }
     }

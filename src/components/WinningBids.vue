@@ -8,7 +8,7 @@
               <span class="title">{{ team }}</span>
             </v-card-title>
             <v-card-text>
-              <p v-for="(value, key) in wonPlayers[team]">
+              <p v-for="(value, key) in wonPlayers[team]" :key="key">
               {{ key }}: {{ value.Years }} year<span v-if="value.Years > 1">s</span> at {{ value.AAV.toFixed(2) }}/year <span v-if="value.Breakdown">({{ value.Breakdown }})</span>
               </p>
             </v-card-text>
