@@ -8,7 +8,7 @@ const store = new Vuex.Store({
     allBids: {},
     winningBids: {},
     playerBids: {},
-    current: 'ale',
+    current: 'nlw',
   },
   mutations: {
     setPlayerBids(state, payload) {

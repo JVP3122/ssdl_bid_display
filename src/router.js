@@ -14,7 +14,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: `/ale/`
+      redirect: `/nlw/`
     },
     {
       path: '/:id/',
