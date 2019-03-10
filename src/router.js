@@ -14,7 +14,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: `/03_03/`
+      redirect: `/03_10/`
     },
     {
       path: '/:id/',
